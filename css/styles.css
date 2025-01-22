@@ -1,6 +1,18 @@
-body{
-    background-color: #E5E5E5;
+/*-----------------------------------------------------------------------
+Base
+-------------------------------------------------------------------------*/
+
+html{
+    box-sizing: border-box;
 }
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+/*-----------------------------------------------------------------------
+Générique
+-------------------------------------------------------------------------*/
 
 .wrapper{
     max-width: 1080px;
@@ -8,93 +20,189 @@ body{
     margin-right: auto;
 }
 
-
-
-h1{
+body{
+    margin: 0px;
+    padding: 0px;
     font-family: "Roboto", serif;
-    font-size: 36px;
-    font-weight: normal;
-}
-
-.banniere div h1{
-    letter-spacing: 5px;
-    font-family: "Roboto", serif;
-    font-size: 36px;
-    font-weight: lighter;
-    text-align: center;
-    padding-top: 81px;
-    padding-bottom: 76px;
-}
-
-p{
-    font-family: "Roboto", serif;
+    background-color: #FFFFFF;
     font-size: 18px;
 }
 
+a{
+    text-decoration: none;
+}
 
+/*-----------------------------------------------------------------------
+Components
+-------------------------------------------------------------------------*/
+
+/* HEADER */
 
 header{
     background-color: #F26C25;
+    height: 80px;
 }
 
-.banniere{
-    background-color: #EEEEEE;
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
 
-.transport{
-    background-color: #FFFFFF;
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-footer{
-    background-color: #000000;
-}
-
-
-
-header div a img{
-    float: left;
-    padding-top: 9px;
-    padding-bottom: 9px;
-}
-
-header div a h1{
-    padding-top: 19px;
-    padding-bottom: 19px;
+.logo p{
+    font-size: 36px;
+    font-weight: 700;
     color: #FFFFFF;
-    margin-top: ;
-}
-
-header div a{
-    text-decoration: none;
-    display: left;
 }
 
 header ul{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    list-style-type: none;
     gap: 40px;
-
 }
 
-header ul li{
-    list-style: none;
-}
-
-header ul li a{
+nav a{
     color: #FFFFFF;
-    font-size: 18px;
-    text-decoration: none;
-    font-family: "Roboto", serif;
-    font-weight: normal;
 }
 
-header ul li a:hover{
+nav a:hover{
     text-decoration: underline;
 }
 
 
 
-.options{
+/* SECTION BANNIERE */
+
+.banniere{
+    background-color: #EEEEEE;
+}
+
+.banniere .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.banniere h1{
+    font-size: 36px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 7.2px;
+}
+
+
+
+/* SECTION TRANSPORT */
+ 
+.titreSection{ 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #EEEEEE;
+    border: 1px solid #D0D0D0;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.titreSection h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.titreSection img{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.conteneurTransport{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.conteneurTransport h3{
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.conteneurTransport p{
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: #000000;
+}
+
+footer .wrapper ul li a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.facebook a{
+    background-image: url(../images/facebook.png);
+}
+
+.twitter a{
+    background-image: url(../images/twitter.png);
+}
+
+.linkedin a{
+    background-image: url(../images/linkedin.png);
+}
+
+.pinterest a{
+    background-image: url(../images/pinterest.png);
+}
+
+.facebook a:hover{
+    background-image: url(../images/facebook-survol.png);
+}
+
+.twitter a:hover{
+    background-image: url(../images/twitter-survol.png);
+}
+
+.linkedin a:hover{
+    background-image: url(../images/linkedin-survol.png);
+}
+
+.pinterest a:hover{
+    background-image: url(../images/pinterest-survol.png);
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .wrapper p{
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+footer .wrapper ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    gap: 20px;
 }
